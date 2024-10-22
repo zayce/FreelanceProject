@@ -1,0 +1,243 @@
+/* Стили для фона кнопки */
+.Giveds {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.Givka {
+  text-align: center;
+}
+
+.Gived {
+  padding: 15px 30px;
+  font-size: 18px;
+  color: white;
+  background: linear-gradient(90deg, #ff7e5f, #feb47b);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 1s ease;
+}
+
+.Gived:hover {
+  background: linear-gradient(90deg, #ffb88c, #ff6f61);
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.Gived:active {
+  transform: scale(0.98);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+/* Стили для модального окна */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  max-width: 400px;
+  width: 90%;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Стили для уведомления */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.close-notification {
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* Стили для модального окна */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8); /* Более темный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #f3f4f6
+  ); /* Градиентный фон для модального окна */
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6); /* Мягкая тень */
+  animation: fadeIn 0.3s; /* Плавное появление */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px); /* Небольшое смещение вверх */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  color: #ff6f61;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-button:hover {
+  color: #ff4d4d;
+}
+
+.registration-form .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.registration-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.registration-form input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border 0.3s;
+}
+
+.registration-form input:focus {
+  border: 1px solid #ff7e5f; /* Цвет границы при фокусе */
+  outline: none;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.submit-button {
+  background-color: #ff7e5f;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #ff6f61;
+  transform: scale(1.05);
+}
+
+/* Стили для уведомления */
+.notification {
+  transform: translate(-50%, 0);
+  background: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  display: flex; /* Используем flex для выравнивания */
+  align-items: center; /* Выравнивание по центру */
+  justify-content: center; /* Центрирование текста */
+  width: 300px; /* Уменьшенная ширина */
+  max-width: 90%; /* Максимальная ширина для мобильных устройств */
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Плавный переход */
+  z-index: 1000; /* Поверх других элементов */
+}
+
+.close-notification {
+  background: transparent; /* Прозрачный фон */
+  border: none; /* Без границы */
+  color: white; /* Белый текст */
+  cursor: pointer; /* Указатель */
+  margin-left: 10px; /* Отступ слева */
+  font-weight: bold; /* Жирный текст */
+}
+
+/* Анимация появления */
+@keyframes slide-in {
+  from {
+    opacity: 0; /* Начальная прозрачность */
+    transform: translateY(-20px); /* Сдвиг вверх */
+  }
+  to {
+    opacity: 1; /* Конечная прозрачность */
+    transform: translateY(0); /* Исходное положение */
+  }
+}
+
+/* Home.css */
+.video-background {
+  position: fixed; /* Фиксированное позиционирование для фона */
+  top: 0;
+  left: 0;
+  width: 100vw; /* На весь экран по ширине */
+  height: 100vh; /* На весь экран по высоте */
+  overflow: hidden; /* Скрыть переполнение */
+  z-index: -1; /* За другими элементами */
+}
+
+.background-video {
+  width: 100%; /* Занимает всю ширину */
+  height: 100%; /* Занимает всю высоту */
+  object-fit: cover; /* Обрезает изображение, сохраняя пропорции */
+}
