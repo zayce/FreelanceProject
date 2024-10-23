@@ -1,0 +1,157 @@
+.burger {
+  display: flex;
+  flex-direction: column;
+  width: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: auto; /* бургер справа */
+  z-index: 20; /* бургер всегда поверх меню */
+  position: relative;
+}
+
+.burger-line {
+  width: 100%;
+  height: 4px;
+  background-color: #fff; /* цвет для видимости на черном фоне */
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.burger.open .burger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.open .burger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open .burger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Затемнение фона */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Прозрачный фон изначально */
+  transition: background-color 0.7s ease; /* Плавная смена фона */
+  pointer-events: none; /* Нельзя взаимодействовать до появления меню */
+  z-index: 15; /* Должен быть выше контента */
+}
+
+.overlay.active {
+  background-color: rgba(0, 0, 0, 0.8); /* Полу-прозрачный фон при открытии */
+  pointer-events: auto; /* Можно взаимодействовать с фоном */
+}
+
+/* Анимация меню для выезда с правой стороны экрана */
+.menu {
+  position: fixed;
+  top: 0;
+  right: -100vw; /* изначально скрыто */
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* Черный фон для меню */
+  transition: right 0.7s ease-in-out; /* плавный выезд */
+  z-index: 20; /* меню должно быть выше overlay */
+}
+
+.menu.open {
+  right: 0; /* меню плавно выезжает на экран */
+}
+
+.header {
+  position: relative;
+  z-index: 10; /* header ниже меню */
+  padding: 20px; /* Отступы для визуального пространства */
+}
+
+.Burgers {
+  padding: 100px;
+}
+
+.Title {
+  color: #fff;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  line-height: 19px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.Desc {
+  display: flex; /* Используем flexbox */
+  justify-content: center; /* Центрируем по горизонтали */
+  gap: 30px; /* Промежуток между элементами */
+  color: #fff; /* Белый цвет текста */
+}
+
+.desc1,
+.desc2 {
+  max-width: 400px; /* Ограничение ширины */
+  text-align: justify; /* Выравнивание по ширине */
+}
+
+.F-Title {
+  color: #fff;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  line-height: 19px;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.F-Desc {
+  color: #fff;
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  line-height: 19px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.R-Foto {
+  width: 1310px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.R-Name {
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.R-S {
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+}
+
+/* Анимация fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.menu.open .fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}

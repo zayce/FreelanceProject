@@ -8,6 +8,6 @@ body {
 }
 
 .App {
-  width: 1280px;
+  min-width: 1120px;
 }
 /* back.mp4 */
